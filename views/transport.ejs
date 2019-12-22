@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>STB</title>
+        <!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">-->
+        <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js">-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    </head>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/">Transporturi</a>
+            </div>
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li ><a href="/">Login</a></li>
+                    <li ><a href="/">Registre</a></li>
+                    <li ><a href="/">SingUp</a></li>
+                </ul>
+            </div>
+            
+        </div>
+            
+        
+    </nav>
+    <div class="container">
+    <header class="jumbotron">
+        <div class="container">
+        <h1>Bun venit pe pagina de transport!</h1>
+        <p>Toate rutele introduse de utilizatori</p>
+        <p>
+        <a class="btn btn-primary btn-large" href="transport/nou">Adauga un nou transport</a>
+        </p>
+        </div>
+    </header>
+
+<div class="row">
+  
+    
+    
+</div>
+<% transporturi.forEach(function(transport){ %>
+<div class="col-md-6 ">
+   
+    <h4>
+        <div class="caption">
+           <%= transport.comentariu %>
+        </div>
+         
+    </h4>
+     <div class="thumbnail">
+          <%= transport.numar %>
+          <%= transport.statie_pornire %>
+         <%= transport.statie_oprire %>
+          
+           <div>
+    <p> 
+    <a class="btn btn-primary" href="/transport/<%=transport.id%>">Mai multe informatii</a>
+    </p>
+    </div>
+    </div>
+  
+</div>
+<%});%>
+</div>
+
+  <p> Aplicatie review STB</p>
+  </body>
+  </div>
+</html>
+
+
+
